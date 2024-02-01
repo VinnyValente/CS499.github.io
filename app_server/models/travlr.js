@@ -1,7 +1,9 @@
+//Import mongoose module
 const mongoose = require('mongoose');
 
 // define the trip schema
-const tripSchema = new mongoose.Schema({
+const TripSchema = new mongoose.Schema({
+
     code: {type: String, required: true, index: true },
     name: {type: String, required: true, index: true},
     length: {type: String, required: true},
@@ -11,4 +13,5 @@ const tripSchema = new mongoose.Schema({
     image: {type: String, required: true},
     description: {type: String, required: true}
 });
-mongoose.model('trips', tripSchema);
+//TripSchema.path('_id');
+mongoose.model('trips', TripSchema);
