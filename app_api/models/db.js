@@ -1,20 +1,9 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1';
-let dbURI = 'mongodb://127.0.0.1:27017/travlr';
-const readLine = require('readline');
-
+let dbURI = 'mongodb://localhost:27017/travlr';
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
-
-const connect = () => {
-    mongoose.connect(dbURI).then(() => {
-      console.log(`Mongoose connected to ${dbURI}`);
-    }).catch(err => {
-      console.log('Mongoose connection error:', err);
-    });
-  };
-
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${dbURI}`);
@@ -51,7 +40,5 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
-
-//connect();
 
 require('./travlr');
