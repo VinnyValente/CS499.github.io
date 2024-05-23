@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { InjectionToken } from '@angular/core';\nexport const BROWSER_STORAGE = new InjectionToken('Browser Storage', {\n  providedIn: 'root',\n  factory: () => localStorage\n});","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

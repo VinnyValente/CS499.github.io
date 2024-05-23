@@ -1,6 +1,6 @@
-// src/app/trip-details/trip-details.component.ts
 import { Component, OnInit, Input } from '@angular/core';
 import { Trip } from '../models/trip';
+import { AuthenticationService } from '../services/authentication';
 
 @Component({
   selector: 'app-trip-details',
@@ -10,8 +10,12 @@ import { Trip } from '../models/trip';
 export class TripDetailsComponent implements OnInit {
   @Input() trip: Trip;
 
-  constructor() { }
+  constructor(private authService: AuthenticationService) { }
 
   ngOnInit(): void {
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 }
