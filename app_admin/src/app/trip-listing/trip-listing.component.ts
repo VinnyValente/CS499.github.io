@@ -13,14 +13,14 @@ import { AuthenticationService } from '../services/authentication';
 export class TripListingComponent implements OnInit {
 
   trips: Trip[];
-
   message: string;
+  noResultsMessage: string; 
 
   constructor(
     private tripDataService: TripDataService,
     private authService: AuthenticationService,
     private router: Router
-    ) { }
+  ) { }
 
   private addTrip(): void {
     console.log('Inside TripListingComponent#addTrip');
@@ -42,8 +42,16 @@ export class TripListingComponent implements OnInit {
     return this.authService.isLoggedIn();
   }
 
+  public updateTrips(searchResults: Trip[]): void {
+    this.trips = searchResults;
+    this.noResultsMessage = this.trips.length === 0 ? 'No results found' : '';
+  }
+
+  public goToSearch(): void {
+    this.router.navigate(['search']);
+  }
+
   ngOnInit() {
     this.getTrips();
   }
-
 }

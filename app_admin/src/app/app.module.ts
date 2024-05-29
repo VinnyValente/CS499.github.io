@@ -14,9 +14,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { SearchComponent } from './search/search.component';
+import { SearchService } from './services/search.service';
 
 @NgModule({ declarations: [
         AppComponent,
+        SearchComponent,
         TripListingComponent,
         TripCardComponent,
         AddTripComponent,
@@ -29,5 +32,6 @@ import { SharedModule } from './shared/shared.module';
         FormsModule,
         ReactiveFormsModule,
         AppRoutingModule,
-        SharedModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        SharedModule], 
+    providers: [provideHttpClient(withInterceptorsFromDi()), SearchService] })
 export class AppModule { }

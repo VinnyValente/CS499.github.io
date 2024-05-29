@@ -1,6 +1,10 @@
 <div *ngIf="isLoggedIn()">
   <button (click)="addTrip()" class="btn btn-info">Add Trip</button>
 </div>
+
+<!-- Add a Search Button -->
+<button (click)="goToSearch()" class="btn btn-secondary">Search Trips</button>
+
 <div class="row">
   <div *ngFor="let trip of trips">
       <app-trip-card [trip]="trip" class="card-deck mt-2"></app-trip-card>

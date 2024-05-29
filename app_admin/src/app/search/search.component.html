@@ -1,0 +1,18 @@
+<div>
+    <h2>Search Trips</h2>
+    <input type="text" [(ngModel)]="query" placeholder="Search for trips">
+    <button (click)="onSearch()">Search</button>
+  
+    <div *ngIf="noResultsMessage" class="no-results">{{ noResultsMessage }}</div>
+    <div *ngIf="results.length > 0">
+      <h3>Results:</h3>
+      <div *ngFor="let trip of results" class="result-item">
+        <h4>{{ trip.name }}</h4>
+        <p>{{ trip.description }}</p>
+        <p><strong>Resort:</strong> {{ trip.resort }}</p>
+        <p><strong>Price per person:</strong> {{ trip.perPerson | currency:'USD' }}</p>
+        <img [src]="'assets/images/' + trip.image" alt="trip thumbnail" class="card-img-top">
+      </div>
+    </div>
+  </div>
+  
