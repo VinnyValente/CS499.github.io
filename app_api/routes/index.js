@@ -10,7 +10,8 @@ const auth = jwt({
 
 const authController = require('../controllers/authentication');
 const tripsController = require('../controllers/trips');
-
+const bookingRouter = require('./booking');
+const analyticsRouter = require('./analytics');
 router
     .route('/login')
     .post(authController.login);
@@ -19,14 +20,18 @@ router
     .route('/register')
     .post(authController.register);
     
+// Trips
 router
     .route('/trips')
-    .get(tripsController.tripsList)
-    .post(auth, tripsController.tripsAddTrip);
+    .get(tripsController.tripsList);
 
 router
     .route('/trips/:tripCode')
     .get(tripsController.tripsFindCode)
     .put(auth, tripsController.tripsUpdateTrip);
+
+router.use('/booking', bookingRouter);
+
+router.use('/analytics', analyticsRouter);
 
 module.exports = router;

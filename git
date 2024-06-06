@@ -1,0 +1,156 @@
+[33mcommit bab3f2c24530260f1f520a1867f8e60c9c48ea16[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mEnhancement-3[m[33m, [m[1;32mEnhancement-2[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed May 29 15:31:13 2024 -0400
+
+    cleaup
+
+[33mcommit 5784f2cdc43422dc73881ae3fd8a178914a26255[m[33m ([m[1;31morigin/Enhancement-2[m[33m, [m[1;32mmodule7[m[33m, [m[1;32mEnhanceement-2[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed May 29 15:14:25 2024 -0400
+
+    implemented fuzzy search functionality
+
+[33mcommit 1c881434a70a06592900b5c6debbda9142c076fe[m[33m ([m[1;31morigin/module7[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 16:32:58 2024 -0400
+
+    Enhanced the project for CS499 with modular Angular components
+
+[33mcommit e57b028fb2004b402793b3feb136fc4bf41c420f[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 15:53:47 2024 -0400
+
+    updated angular version
+
+[33mcommit bbd22c407253ea822b8b9d194e92c855d08070e0[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 15:39:39 2024 -0400
+
+    version updates
+
+[33mcommit 5cfab7e12afecc27556225913a671febd8668a2a[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 15:07:03 2024 -0400
+
+    Enchancement One - Refactor
+
+[33mcommit 4430925e2a73ea9b55c51703970b674b19fb238a[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 14:43:13 2024 -0400
+
+    version updates
+
+[33mcommit 8d64288886dd5e16fb3a0cf4ce4a7564f917413d[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 23 13:33:23 2024 -0400
+
+    update
+
+[33mcommit caae73397b2c4e7ad447173c302b70b8dbbb5c17[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Vincent Valente <125837373+Vincent-Valente@users.noreply.github.com>
+Date:   Thu May 23 16:16:09 2024 -0400
+
+    Create index.html
+
+[33mcommit 0631e7fa6471cc1ea27b2d769ba131b0bb93a8a5[m
+Author: Vincent Valente <125837373+Vincent-Valente@users.noreply.github.com>
+Date:   Thu May 16 12:52:19 2024 -0400
+
+    Update README.md
+
+[33mcommit fb637e37f848a98a6c615f95e3101a08b50bbc01[m
+Merge: f818196 64ec908
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu May 16 12:28:09 2024 -0400
+
+    Resolved merge conflicts and merged origin/main into main
+
+[33mcommit 64ec9084035e11153c91734a45bae33aab7c0596[m
+Author: Vincent-Valente <125837373+Vincent-Valente@users.noreply.github.com>
+Date:   Wed May 8 16:52:40 2024 -0400
+
+    Update README.md
+
+[33mcommit 487a4a69c476f87e8bc47902a71b46d075afba8f[m
+Author: Vincent-Valente <125837373+Vincent-Valente@users.noreply.github.com>
+Date:   Wed May 8 16:49:40 2024 -0400
+
+    Initial commit
+
+[33mcommit f818196ae481b6737fd2f387e6ce95930d9a87e7[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Feb 21 17:19:48 2024 -0500
+
+    Security
+
+[33mcommit aacf6ab869c09304ff3d4f3bc41f275ee6fedc7f[m[33m ([m[1;31morigin/module6[m[33m, [m[1;32mmodule6[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Sat Feb 17 15:15:12 2024 -0500
+
+    Compleated SPA
+
+[33mcommit 71de10334c04a0bd2e213deb04b07f2cc3b329f1[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu Feb 15 22:01:32 2024 -0500
+
+    Started SPA
+
+[33mcommit 034aa91a8314c81011cc58c5ef13080e520d0c1b[m[33m ([m[1;31morigin/module5[m[33m, [m[1;32mmodule5[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu Feb 8 18:38:48 2024 -0500
+
+    RESTful API
+
+[33mcommit 80730b4c85ff808e532016724de3994eadbf8e78[m[33m ([m[1;31morigin/module4[m[33m, [m[1;32mmodule4[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu Feb 1 16:07:53 2024 -0500
+
+    NoSQL Databases, Models, and Schemas
+
+[33mcommit a7286ab029c726bfd959b6e37787199b83631e4f[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Jan 31 15:55:44 2024 -0500
+
+    Added db.json and edited trips.json
+
+[33mcommit 704b846ee530086f7113555e58283d83ab9b7b76[m[33m ([m[1;31morigin/module3[m[33m, [m[1;32mmodule3[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Thu Jan 25 16:02:06 2024 -0500
+
+    Converted static HTML to templates with JSON
+
+[33mcommit 84262140f2cf772dfc6d140fb99f1df3cdf8ac0b[m[33m ([m[1;31morigin/module2[m[33m, [m[1;32mmodule2[m[33m)[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Jan 17 17:11:09 2024 -0500
+
+    Added handlebards for every page
+
+[33mcommit 8f660df9e71202a753c73e97d672e7b68f518d32[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Jan 17 15:18:25 2024 -0500
+
+    required hbs
+
+[33mcommit c21f8b576a53702f666a75f55298a8c899678aaf[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Jan 17 15:09:41 2024 -0500
+
+    added partials for header and footer
+
+[33mcommit 52314a8a3779a4652412e3fd9389a30dee9b8209[m
+Author: VinnyValente <valentevinny356@yahoo.com>
+Date:   Wed Jan 17 14:48:53 2024 -0500
+
+    Added app_server, travel.js and main.js
+
+[33mcommit 326413e7ea01d35a4f91f296b857e9cd23a7ae3c[m[33m ([m[1;31morigin/module1[m[33m, [m[1;32mmodule1[m[33m)[m
+Author: Vincent-Valente <vincent.valente@snhu.edu>
+Date:   Tue Jan 9 15:23:27 2024 -0500
+
+    Express website, static HTML only
+
+[33mcommit 099fe96dd5a2496f84b8c8dfd68d89c0d7de6421[m[33m ([m[1;32mmain[m[33m)[m
+Author: Vincent-Valente <125837373+Vincent-Valente@users.noreply.github.com>
+Date:   Tue Jan 9 13:49:53 2024 -0500
+
+    Initial commit

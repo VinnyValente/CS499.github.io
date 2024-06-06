@@ -2,28 +2,42 @@ const mongoose = require('mongoose')
 const Trip = mongoose.model('trips')
 const User = mongoose.model('users');
 
-// GET: /trips - lists all trips
-const tripsList = async (req, res) => {
-    Trip
-        .find({})  // no parameter in find query returns all trips
-        .exec((err, trips) => {
-            // if no trips found, return error message
-            if (!trips) {
-                return res
-                    .status(404)
-                    .json({ "message": "Trip not found" });
-            // else if error occurred in mongoose, return the error
-            } else if (err) {
-                return res
-                    .status(404)
-                    .json(err);
-            // else the trips were found, so return OK code and trips
-            } else {
-                return res
-                    .status(200)
-                    .json(trips);
-            }
-        })
+const tripsList = (req, res) => {
+    const { name, resort, minPrice, maxPrice, sortBy } = req.query;
+    const query = {};
+    const sort = {};
+
+    if (name) query.name = new RegExp(name, 'i');
+    if (resort) query.resort = new RegExp(resort, 'i');
+    if (minPrice) query.perPerson = { $gte: Number(minPrice) };
+    if (maxPrice) {
+        if (!query.perPerson) query.perPerson = {};
+        query.perPerson.$lte = Number(maxPrice);
+    }
+
+    switch (sortBy) {
+        case 'priceAsc':
+            sort.perPerson = 1;
+            break;
+        case 'priceDesc':
+            sort.perPerson = -1;
+            break;
+        case 'nameAsc':
+            sort.name = 1;
+            break;
+        case 'nameDesc':
+            sort.name = -1;
+            break;
+        default:
+            break;
+    }
+
+    Trip.find(query).sort(sort).exec((err, trips) => {
+        if (err) {
+            return res.status(500).json(err);
+        }
+        res.status(200).json(trips);
+    });
 };
 
 // GET: /trips/:tripCode - returns a single trip
