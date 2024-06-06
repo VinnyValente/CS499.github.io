@@ -1,26 +1,29 @@
 const mongoose = require('mongoose');
 const Booking = mongoose.model('Booking');
 
-const bookingsSummary = (req, res) => {
-    Booking.aggregate([
-        {
-            $group: {
-                _id: '$trip',
-                totalBookings: { $sum: 1 },
-                averageCost: { $avg: '$cost' }
+// Function to get bookings per destination
+const getBookingsPerDestination = async (req, res) => {
+    try {
+        // Aggregate bookings to get total bookings and revenue per destination
+        const result = await Booking.aggregate([
+            {
+                $group: {
+                    _id: "$tripName", // Group by tripName
+                    totalBookings: { $sum: 1 }, // Calculate total bookings
+                    totalRevenue: { $sum: "$cost" } // Calculate total revenue
+                }
+            },
+            {
+                $sort: { totalBookings: -1 } // Sort by total bookings in descending order
             }
-        },
-        {
-            $sort: { totalBookings: -1 }
-        }
-    ]).exec((err, summary) => {
-        if (err) {
-            return res.status(400).json(err);
-        }
-        res.status(200).json(summary);
-    });
+        ]);
+
+        res.status(200).json(result); // Successful response with aggregated data
+    } catch (err) {
+        res.status(500).json({ message: err.message }); // Internal server error
+    }
 };
 
 module.exports = {
-    bookingsSummary
+    getBookingsPerDestination
 };

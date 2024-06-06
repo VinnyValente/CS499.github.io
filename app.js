@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // Load environment variables
 
 const createError = require('http-errors');
 const express = require('express');
@@ -8,9 +8,11 @@ const logger = require('morgan');
 const hbs = require('hbs');
 const passport = require('passport');
 
+// Connect to database and configure passport for authentication
 require('./app_api/models/db');
 require('./app_api/config/passport');
 
+// Import routes
 const indexRouter = require('./app_server/routes/index');
 const usersRouter = require('./app_server/routes/users');
 const travelRouter = require('./app_server/routes/travel');
@@ -21,16 +23,13 @@ const mealsRouter = require('./app_server/routes/meals');
 const roomsRouter = require('./app_server/routes/rooms');
 const apiRouter = require('./app_api/routes/index');
 const bookingRouter = require('./app_api/routes/booking');
-
+const analyticsRouter = require('./app_api/routes/analytics');
 
 const app = express();
 
-// view engine setup
+// View engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
-
-// register handlebars partials(https://www.npmjs.com/package/hbs)
-hbs.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials'));
-
+hbs.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials')); // Register handlebars partials
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
@@ -38,16 +37,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(passport.initialize());
+app.use(passport.initialize()); // Initialize passport for authentication
 
-//allow CORS
+// Allow CORS
 app.use('/api', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requesteed-With, Content-Type, Accept, Authorization');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
-})
+});
 
+// Define routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
@@ -58,28 +58,27 @@ app.use('/meals', mealsRouter);
 app.use('/rooms', roomsRouter);
 app.use('/api', apiRouter);
 app.use('/api/booking', bookingRouter);
+app.use('/api/analytics', analyticsRouter);
 
-// catch unauthorized error and create 401
+// Catch unauthorized error and create 401 response
 app.use(function(err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
-    res
-      .status(401)
-      .json({ "message": err.name + ": " + err.message});
+    res.status(401).json({ "message": err.name + ": " + err.message });
   }
 });
 
-// catch 404 and forward to error handler
+// Catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// Error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  // Set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  // Render the error page
   res.status(err.status || 500);
   res.render('error');
 });

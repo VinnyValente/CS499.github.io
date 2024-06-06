@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Define booking schema
 const bookingSchema = new mongoose.Schema({
     tripName: {
         type: String,
@@ -15,8 +16,9 @@ const bookingSchema = new mongoose.Schema({
     },
     created: {
         type: Date,
-        default: Date.now
+        default: Date.now // Default to current date and time if not specified
     }
 });
 
+// Create mongoose model for bookings using the defined schema
 mongoose.model('Booking', bookingSchema);
