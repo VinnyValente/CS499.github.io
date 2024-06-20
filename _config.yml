@@ -1,6 +1,3 @@
-title: Vincent Valente's Computer Science Capstone
-description: This is my final project for CS-499, Computer Science Capstone at SNHU.
+title: "Vincent Valente's Computer Science Capstone"
+description: "This is my final project for CS-499, Computer Science Capstone at SNHU."
 theme: minima
-
-# Build settings
-markdown: kramdown
