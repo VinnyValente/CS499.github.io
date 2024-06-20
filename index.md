@@ -14,12 +14,12 @@ See the artifact's [report and code here](artifacts/travlr%20enhanced.zip).
 ## Project 2: Algorithms and Data Structures
 This project is an enhancement of the search functionality for the Travlr Getaways Travel Booking Website. It implements advanced search algorithms for better performance and user experience.
 
-See the artifact's [report and code here](artifacts/travlr%20original.zip).
+See the artifact's [report and code here](artifacts/travlr%20enhanced.zip).
 
 ## Project 3: Databases
 This database project expands the Travlr Getaways Travel Booking Website to include MongoDB for managing travel data efficiently. It showcases my knowledge of database management and integration.
 
-See the artifact's [report and code here](artifacts/travlr%20database.zip).
+See the artifact's [report and code here](artifacts/travlr%20enhanced.zip).
 
 ## Professional Self-Assessment
 My time in the Computer Science program at Southern New Hampshire University has assisted in shaping my professional goals and values. It has prepared me to become an asset to prospective employers. This ePortfolio shows my ability to plan and develop industry-standard code and software programs. Although this is not a complete reflection of my work in this program, it still depicts my knowledge in three categories: Software Design and Engineering, Algorithms and Data Structures, and Databases.
